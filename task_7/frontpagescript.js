@@ -392,10 +392,12 @@ function Login(myForm) {
 
 
 	this.check_password = function(){
-		if(name == password){
-			window.open("file:///home/adwaith/tasks/task_7/logined.html","_self");
-				   	document.getElementById("form1").style.display="block";
-  	                document.getElementById("table1").style.display="none";
+		if(name == localStorage.username && password == localStorage.password){
+			window.open("http://10.2.0.130/logined.html","_self");
+			
+		}
+		else{
+			alert("invalid credentials");
 		}
 	}
 
